@@ -5,6 +5,10 @@ function comprar(){
 
     let tipo_ingresso = document.getElementById("tipo-ingresso").value;
     let quantidade_ingresso = parseInt(document.getElementById("qtd").value);
+    
+    if(quantidade_ingresso === "" || isNaN(quantidade_ingresso) || quantidade_ingresso <= 0) {
+        return alert("Insira quantidade")
+    } 
 
     if (tipo_ingresso === "pista") {
         if (quantidade_ingresso > pista_qtd) {
